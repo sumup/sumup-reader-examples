@@ -1,0 +1,34 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/assert@1": "1.0.13",
+    "jsr:@std/internal@^1.0.6": "1.0.10",
+    "jsr:@sumup/sdk@^0.0.11": "0.0.11",
+    "npm:@sumup/sdk@*": "0.0.11"
+  },
+  "jsr": {
+    "@std/assert@1.0.13": {
+      "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.10": {
+      "integrity": "e3be62ce42cab0e177c27698e5d9800122f67b766a0bea6ca4867886cbde8cf7"
+    },
+    "@sumup/sdk@0.0.11": {
+      "integrity": "51b09a9eb9f6ee134a9575720a919bcbad5980ac100ac8c447fb69a726cf72eb"
+    }
+  },
+  "npm": {
+    "@sumup/sdk@0.0.11": {
+      "integrity": "sha512-Pxp41JfiqGZobdIkldjJZVz+RV2R5ScIQHNsRFo5fVhTsdwLonQlNf4OHrxlcgsoeOZdbshmF2QwtHd7tozo3g=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1",
+      "jsr:@sumup/sdk@^0.0.11"
+    ]
+  }
+}
