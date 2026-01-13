@@ -1,0 +1,29 @@
+.gradle/
+build/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+nbproject/
+
+# OS/editor noise
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Local env
+.env
+
+# JVM output
+out/
+bin/

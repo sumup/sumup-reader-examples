@@ -1,0 +1,32 @@
+name: Java CI
+
+on:
+  push:
+    branches: [main]
+    paths: [backend/java/**, .github/workflows/java.yaml]
+  pull_request:
+    branches: [main]
+    paths: [backend/java/**, .github/workflows/java.yaml]
+
+jobs:
+  backend-java:
+    name: Backend Java
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/java
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Set up Java
+        uses: actions/setup-java@f2beeb24e141e01a676f977032f5a29d81c9e27e # v4.4.0
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Lint
+        run: ./gradlew --no-daemon spotlessCheck
+
+      - name: Build
+        run: ./gradlew --no-daemon build
