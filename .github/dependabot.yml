@@ -1,0 +1,137 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/backend/node"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "@sumup/sdk"
+      js-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@sumup/sdk"
+
+  - package-ecosystem: "npm"
+    directory: "/backend/bun"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "@sumup/sdk"
+      js-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@sumup/sdk"
+
+  - package-ecosystem: "npm"
+    directory: "/frontend/react"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "@sumup/sdk"
+      js-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@sumup/sdk"
+
+  - package-ecosystem: "gomod"
+    directory: "/backend/go"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "github.com/sumup/sumup-go"
+      go-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "github.com/sumup/sumup-go"
+
+  - package-ecosystem: "gradle"
+    directory: "/backend/java"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "com.sumup:sumup"
+      java-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "com.sumup:sumup"
+
+  - package-ecosystem: "nuget"
+    directory: "/backend/dotnet"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "SumUp"
+      dotnet-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "SumUp"
+
+  - package-ecosystem: "pip"
+    directory: "/backend/python"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "sumup"
+      python-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "sumup"
+
+  - package-ecosystem: "cargo"
+    directory: "/backend/rust"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    cooldown:
+      default-days: 3
+    groups:
+      sumup-sdk:
+        patterns:
+          - "sumup"
+      rust-example-deps:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "sumup"
