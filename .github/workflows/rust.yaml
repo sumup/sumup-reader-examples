@@ -1,0 +1,32 @@
+name: Rust CI
+
+on:
+  push:
+    branches: [main]
+    paths: [backend/rust/**, .github/workflows/rust.yaml]
+  pull_request:
+    branches: [main]
+    paths: [backend/rust/**, .github/workflows/rust.yaml]
+
+jobs:
+  backend-rust:
+    name: Backend Rust
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/rust
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - uses: actions-rust-lang/setup-rust-toolchain@1780873c7b576612439a134613cc4cc74ce5538c # v1.15.2
+        with:
+          components: rustfmt, clippy
+
+      - name: Lint (fmt)
+        run: cargo fmt -- --check
+
+      - name: Lint (clippy)
+        run: cargo clippy --all-targets -- --deny warnings
+
+      - name: Build
+        run: cargo build --locked
