@@ -1,0 +1,34 @@
+name: Python CI
+
+on:
+  push:
+    branches: [main]
+    paths: [backend/python/**, .github/workflows/python.yaml]
+  pull_request:
+    branches: [main]
+    paths: [backend/python/**, .github/workflows/python.yaml]
+
+jobs:
+  backend-python:
+    name: Backend Python
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/python
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867 # v7.1.6
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Install Ruff
+        run: uv pip install ruff
+
+      - name: Lint
+        run: uv run ruff check app.py
+
+      - name: Type check
+        run: uv run python -m compileall app.py

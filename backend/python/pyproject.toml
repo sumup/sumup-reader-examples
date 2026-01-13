@@ -1,0 +1,11 @@
+[project]
+name = "sumup-examples-python"
+version = "0.1.0"
+description = "SumUp Python example"
+requires-python = ">=3.10"
+dependencies = [
+  "flask",
+  "sumup",
+]
+
+[tool.uv]
