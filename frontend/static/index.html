@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SumUp Readers (Static)</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://static.sumup.com/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://static.sumup.com/favicons/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="header">
+          <p class="eyebrow">SumUp Card Readers</p>
+          <h1>Reader Checkout Starter</h1>
+          <p class="subtitle">
+            Pair a card reader, list existing devices, and trigger in-person
+            checkouts from this UI.
+          </p>
+          <a
+            class="link"
+            href="https://virtual-solo.sumup.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Virtual Solo
+          </a>
+        </header>
+
+        <div class="panel">
+          <label class="field">
+            <span>Backend base URL</span>
+            <input
+              id="backend-url"
+              type="url"
+              placeholder="http://localhost:8080"
+              autocomplete="url"
+              inputmode="url"
+            />
+          </label>
+          <p class="hint">Defaults to http://localhost:8080.</p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Link a reader</h2>
+              <p>Use the pairing code displayed on the device.</p>
+            </div>
+          </div>
+          <div class="grid">
+            <label class="field">
+              <span>Pairing code</span>
+              <input
+                id="pairing-code"
+                type="text"
+                placeholder="8-9 characters"
+              />
+            </label>
+            <label class="field">
+              <span>Reader name</span>
+              <input id="reader-name" type="text" placeholder="Front Desk" />
+            </label>
+          </div>
+          <button id="link-reader" type="button">Link reader</button>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Readers</h2>
+              <p>Choose a reader to start a checkout.</p>
+            </div>
+            <button id="refresh-readers" type="button">Refresh</button>
+          </div>
+          <div id="readers-list" class="reader-list"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Checkout amount</h2>
+              <p>Applies to the next checkout you start.</p>
+            </div>
+          </div>
+          <label class="field">
+            <span>Amount (EUR)</span>
+            <input
+              id="amount"
+              type="number"
+              min="0.01"
+              step="0.01"
+              value="10.00"
+            />
+          </label>
+        </div>
+
+        <div class="status" id="loading">Working...</div>
+        <div class="message" id="message"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
