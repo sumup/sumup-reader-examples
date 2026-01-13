@@ -1,0 +1,29 @@
+name: Go CI
+
+on:
+  push:
+    branches: [main]
+    paths: [backend/go/**, .github/workflows/go.yaml]
+  pull_request:
+    branches: [main]
+    paths: [backend/go/**, .github/workflows/go.yaml]
+
+jobs:
+  backend-go:
+    name: Backend Go
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend/go
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - uses: actions/setup-go@4dc6199c7b1a012772edbd06daecab0f50c9053c # v6.1.0
+        with:
+          go-version-file: backend/go/go.mod
+
+      - name: Vet
+        run: go vet ./...
+
+      - name: Build
+        run: go build ./...
