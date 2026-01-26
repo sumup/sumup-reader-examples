@@ -1,6 +1,6 @@
 plugins {
     id 'application'
-    id 'com.diffplug.spotless' version '8.1.0'
+    id 'com.diffplug.spotless' version '8.2.0'
 }
 
 group = 'com.sumup.examples'
@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation 'com.sumup:sumup:0.0.5'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.0'
 }
 
 application {
