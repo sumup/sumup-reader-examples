@@ -1,6 +1,6 @@
 github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
 github.com/google/go-cmp v0.5.9/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/sumup/sumup-go v0.12.0 h1:sUBYRzRNlSArvayKMV9Rplb+Vc7+PHQ0osaSqo22cDg=
-github.com/sumup/sumup-go v0.12.0/go.mod h1:UgT9aaxvUBrAiRpunqyb1zi5v/+1z+6Lr6p6bgL8EYI=
+github.com/sumup/sumup-go v0.13.0 h1:35Xpv8cNLS5O02voKgwgks8Gz2QU53Ek8emlOyVuvkU=
+github.com/sumup/sumup-go v0.13.0/go.mod h1:UgT9aaxvUBrAiRpunqyb1zi5v/+1z+6Lr6p6bgL8EYI=
 golang.org/x/oauth2 v0.27.0 h1:da9Vo7/tDv5RH/7nZDz1eMGS/q1Vv1N/7FCrBhI9I3M=
 golang.org/x/oauth2 v0.27.0/go.mod h1:onh5ek6nERTohokkhCD/y2cV4Do3fxFHFuAejCkRWT8=
