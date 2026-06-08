@@ -2,7 +2,6 @@ package com.sumup.examples;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sumup.sdk.SumUpClient;
-import com.sumup.sdk.SumUpEnvironment;
 import com.sumup.sdk.models.CheckoutCreateRequest;
 import com.sumup.sdk.models.Currency;
 import com.sun.net.httpserver.HttpExchange;
@@ -30,7 +29,7 @@ public class Server {
     }
 
     SumUpClient client =
-        SumUpClient.builder().environment(SumUpEnvironment.PRODUCTION).accessToken(apiKey).build();
+        SumUpClient.builder().baseUri("https://api.sumup.com").accessToken(apiKey).build();
 
     int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
     HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);

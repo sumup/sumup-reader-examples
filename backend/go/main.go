@@ -10,7 +10,6 @@ import (
 
 	"github.com/sumup/sumup-go"
 	sumupclient "github.com/sumup/sumup-go/client"
-	"github.com/sumup/sumup-go/readers"
 )
 
 type createReaderRequest struct {
@@ -59,9 +58,9 @@ func main() {
 				return
 			}
 
-			reader, err := client.Readers.Create(r.Context(), merchantCode, readers.Create{
-				PairingCode: readers.ReaderPairingCode(pairingCode),
-				Name:        readers.ReaderName(name),
+			reader, err := client.Readers.Create(r.Context(), merchantCode, sumup.ReadersCreateParams{
+				PairingCode: sumup.ReaderPairingCode(pairingCode),
+				Name:        sumup.ReaderName(name),
 			})
 			if err != nil {
 				log.Printf("[ERROR] create reader: %v", err)
@@ -105,9 +104,9 @@ func main() {
 			return
 		}
 
-		checkout, err := client.Readers.CreateCheckout(r.Context(), merchantCode, readerID, readers.CreateCheckout{
+		checkout, err := client.Readers.CreateCheckout(r.Context(), merchantCode, readerID, sumup.CreateCheckoutRequest{
 			Description: ptr("Card reader checkout"),
-			TotalAmount: readers.CreateCheckoutTotalAmount{
+			TotalAmount: sumup.CreateCheckoutRequestTotalAmount{
 				Currency:  "EUR",
 				MinorUnit: 2,
 				Value:     int(math.Round(payload.Amount * 100)),

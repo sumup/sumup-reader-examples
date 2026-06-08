@@ -380,16 +380,16 @@ wheels = [
 
 [[package]]
 name = "sumup"
-version = "0.0.21"
+version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/16/bc/b352f41208b59025fddd12471a5e604ab1681aac05add24b76fa9c3d094f/sumup-0.0.21.tar.gz", hash = "sha256:fa7876301adeb65f3a57c99979088c984096d4e53950b62513460aa02844bb4c", size = 48804, upload-time = "2026-01-06T10:21:22.438Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/35/b8/f5e5c4218b7e2ad800a38a21956cb5df396ae0f61220642171fcf1d5243e/sumup-0.2.2.tar.gz", hash = "sha256:7753dbe226cc0fe461f1b2d959a12a45b40caa06064d4e2f36b698f807435459", size = 55942, upload-time = "2026-05-21T10:56:40.866Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b6/c0/49ee49ce3ca1ce7e49389136e58941e0d56a5a75feef9c8652a4f2887d6f/sumup-0.0.21-py3-none-any.whl", hash = "sha256:4d346769425f2655a002a760a8029538d1b2bc87f3954036e4e6713af94f157f", size = 64099, upload-time = "2026-01-06T10:21:21.028Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/ae/53dedffbcb61f5d47b4fb022de98162c66577dc47aa4459ac4d75fee3f05/sumup-0.2.2-py3-none-any.whl", hash = "sha256:08b95f29998b608e00e23959593884d93cc05c8c636c303ea8dbe99221bb7f25", size = 65181, upload-time = "2026-05-21T10:56:39.548Z" },
 ]
 
 [[package]]
@@ -404,7 +404,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "flask" },
-    { name = "sumup" },
+    { name = "sumup", specifier = "==0.2.2" },
 ]
 
 [[package]]
