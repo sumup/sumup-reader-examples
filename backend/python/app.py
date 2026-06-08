@@ -2,7 +2,6 @@ import os
 
 from flask import Flask, jsonify, request
 from sumup import Sumup
-from sumup.readers import CreateReaderBody, CreateReaderCheckoutBody, CreateReaderCheckoutBodyTotalAmount
 
 api_key = os.environ.get("SUMUP_API_KEY")
 merchant_code = os.environ.get("SUMUP_MERCHANT_CODE")
@@ -27,7 +26,7 @@ def parse_amount(value):
     if amount <= 0:
         return None
 
-    return CreateReaderCheckoutBodyTotalAmount(currency="EUR", minor_unit=2, value=round(amount * 100))
+    return {"currency": "EUR", "minor_unit": 2, "value": round(amount * 100)}
 
 
 @app.post("/readers")
@@ -41,7 +40,8 @@ def create_reader():
 
     reader = client.readers.create(
         merchant_code,
-        body=CreateReaderBody(pairing_code=pairing_code, name=name),
+        pairing_code=pairing_code,
+        name=name,
     )
 
     if hasattr(reader, "model_dump"):
@@ -75,10 +75,8 @@ def create_reader_checkout(reader_id):
     checkout = client.readers.create_checkout(
         merchant_code,
         reader_id,
-        body=CreateReaderCheckoutBody(
-            total_amount=total_amount,
-            description="Card reader checkout",
-        ),
+        total_amount=total_amount,
+        description="Card reader checkout",
     )
 
     if hasattr(checkout, "model_dump"):

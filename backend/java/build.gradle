@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.sumup:sumup:0.0.5'
+    implementation 'com.sumup:sumup-sdk:0.0.6'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.3'
 }
 
@@ -28,7 +28,7 @@ java {
 spotless {
     java {
         target 'src/**/*.java'
-        googleJavaFormat('1.24.0')
+        googleJavaFormat('1.27.0')
     }
     format 'misc', {
         target '*.gradle', '*.md'

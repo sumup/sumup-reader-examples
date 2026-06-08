@@ -5,7 +5,7 @@ use axum::{
 };
 use serde::{Deserialize, Serialize};
 use std::{env, net::SocketAddr};
-use sumup::{readers, Client};
+use sumup::{readers, Authorization, Client};
 
 #[derive(Deserialize)]
 struct CreateReaderRequest {
@@ -29,7 +29,7 @@ async fn main() {
     let merchant_code =
         env::var("SUMUP_MERCHANT_CODE").expect("Missing SUMUP_MERCHANT_CODE env var.");
 
-    let client = Client::new().with_authorization(&api_key);
+    let client = Client::new().with_authorization(Authorization::api_key(&api_key));
 
     let app = Router::new()
         .route(
@@ -75,7 +75,7 @@ async fn main() {
                             ));
                         }
 
-                        let body = readers::CreateReaderBody {
+                        let body = readers::CreateBody {
                             pairing_code: pairing_code.to_string(),
                             name: name.to_string(),
                             metadata: None,
@@ -117,6 +117,7 @@ async fn main() {
                         }
 
                         let request = readers::CreateReaderCheckoutRequest {
+                            aade: None,
                             total_amount: readers::Money {
                                 currency: "EUR".into(),
                                 minor_unit: 2,

@@ -1,9 +1,7 @@
 module sumup-examples-go
 
-go 1.23.0
+go 1.24.0
 
-toolchain go1.23.2
+require github.com/sumup/sumup-go v0.17.0
 
-require github.com/sumup/sumup-go v0.12.0
-
-require golang.org/x/oauth2 v0.27.0 // indirect
+require golang.org/x/oauth2 v0.35.0 // indirect

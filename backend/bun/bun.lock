@@ -5,7 +5,7 @@
     "": {
       "name": "sumup-examples-bun",
       "dependencies": {
-        "@sumup/sdk": "^0.0.11",
+        "@sumup/sdk": "^0.1.6",
       },
       "devDependencies": {
         "@biomejs/biome": "^2.1.2",
@@ -31,6 +31,6 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.3.11", "", { "os": "win32", "cpu": "x64" }, "sha512-43VrG813EW+b5+YbDbz31uUsheX+qFKCpXeY9kfdAx+ww3naKxeVkTD9zLIWxUPfJquANMHrmW3wbe/037G0Qg=="],
 
-    "@sumup/sdk": ["@sumup/sdk@0.0.11", "", {}, "sha512-Pxp41JfiqGZobdIkldjJZVz+RV2R5ScIQHNsRFo5fVhTsdwLonQlNf4OHrxlcgsoeOZdbshmF2QwtHd7tozo3g=="],
+    "@sumup/sdk": ["@sumup/sdk@0.1.6", "", {}, "sha512-7uCcP2vTz9FOcmGl8mTXe6V83AdwbGNQiVUuK7c2Ezh7JLpuNK2vZcch/9YD7cuM7Ge6Spbb8OBMCo6LzKUtzA=="],
   }
 }
