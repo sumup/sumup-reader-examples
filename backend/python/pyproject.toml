@@ -5,7 +5,7 @@ description = "SumUp Python example"
 requires-python = ">=3.10"
 dependencies = [
   "flask",
-  "sumup==0.2.2",
+  "sumup==0.3.0",
 ]
 
 [tool.uv]
