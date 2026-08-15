@@ -1208,9 +1208,9 @@ checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
 
 [[package]]
 name = "sumup"
-version = "0.5.10"
+version = "0.5.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c501d5f9c8ab990d596dd244df2bbca2ac84cd623133c96eb4df7d28d27752b5"
+checksum = "d24508be53f1391825f759e9cfdcb93eb4be6d34b6daf211fc6e336f96610edf"
 dependencies = [
  "chrono",
  "reqwest",
