@@ -6,6 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SumUp" Version="0.0.16" />
+    <PackageReference Include="SumUp" Version="0.0.18" />
   </ItemGroup>
 </Project>
