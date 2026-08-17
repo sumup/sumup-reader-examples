@@ -1,4 +1,4 @@
-github.com/sumup/sumup-go v0.17.2 h1:OpxHJ5yX0N2aCgrWhGqHcKoElMFHT38QanvVOd0e3pM=
-github.com/sumup/sumup-go v0.17.2/go.mod h1:D++G2u9zvobimuUrgvSbah/tS3ON2Dmi6yb6ScA2Jpg=
+github.com/sumup/sumup-go v0.18.0 h1:Ck6u4vNOL/FUbMQ+O4VdmgkjBPQPjNKxmtyU7aThUVI=
+github.com/sumup/sumup-go v0.18.0/go.mod h1:D++G2u9zvobimuUrgvSbah/tS3ON2Dmi6yb6ScA2Jpg=
 golang.org/x/oauth2 v0.35.0 h1:Mv2mzuHuZuY2+bkyWXIHMfhNdJAdwW3FuWeCPYN5GVQ=
 golang.org/x/oauth2 v0.35.0/go.mod h1:lzm5WQJQwKZ3nwavOZ3IS5Aulzxi68dUSgRHujetwEA=
