@@ -8,7 +8,7 @@
     "lint:fix": "biome check --write"
   },
   "dependencies": {
-    "@sumup/sdk": "^0.1.8",
+    "@sumup/sdk": "^0.1.9",
     "express": "^5.2.1"
   },
   "devDependencies": {
