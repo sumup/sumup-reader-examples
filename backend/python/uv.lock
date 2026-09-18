@@ -13,16 +13,16 @@ wheels = [
 
 [[package]]
 name = "anyio"
-version = "4.12.1"
+version = "4.14.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
     { name = "idna" },
     { name = "typing-extensions", marker = "python_full_version < '3.13'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz", hash = "sha256:41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703", size = 228685, upload-time = "2026-01-06T11:45:21.246Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/61/cc/a381afa6efea9f496eff839d4a6a1aed3bfafc7b3ab4b0d1b243a12573dd/anyio-4.14.2.tar.gz", hash = "sha256:cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f", size = 260176, upload-time = "2026-07-12T20:29:07.082Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/38/0e/27be9fdef66e72d64c0cdc3cc2823101b80585f8119b5c112c2e8f5f7dab/anyio-4.12.1-py3-none-any.whl", hash = "sha256:d405828884fc140aa80a3c667b8beed277f1dfedec42ba031bd6ac3db606ab6c", size = 113592, upload-time = "2026-01-06T11:45:19.497Z" },
+    { url = "https://files.pythonhosted.org/packages/da/35/f2287558c17e29fafc8ef3daf819bb9834061cfa43bff8014f7df7f63bdc/anyio-4.14.2-py3-none-any.whl", hash = "sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494", size = 125813, upload-time = "2026-07-12T20:29:05.763Z" },
 ]
 
 [[package]]
@@ -69,7 +69,7 @@ name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+    { name = "typing-extensions" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/50/79/66800aadf48771f6b62f7eb014e352e5d06856655206165d775e675a02c9/exceptiongroup-1.3.1.tar.gz", hash = "sha256:8b412432c6055b0b7d14c310000ae93352ed6754f70fa8f7c34141f91c4e3219", size = 30371, upload-time = "2025-11-21T23:01:54.787Z" }
 wheels = [
@@ -380,16 +380,16 @@ wheels = [
 
 [[package]]
 name = "sumup"
-version = "0.2.2"
+version = "0.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/35/b8/f5e5c4218b7e2ad800a38a21956cb5df396ae0f61220642171fcf1d5243e/sumup-0.2.2.tar.gz", hash = "sha256:7753dbe226cc0fe461f1b2d959a12a45b40caa06064d4e2f36b698f807435459", size = 55942, upload-time = "2026-05-21T10:56:40.866Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/29/9e/55e944233e9088e36276bf67da61bd5706d46f1bcd1a60d551714e60be36/sumup-0.3.1.tar.gz", hash = "sha256:d3f9e6a0e4e13cc56537f6335d30a0e9ad922f9a57d64c7bf9f2593b55eb0536", size = 57263, upload-time = "2026-07-17T16:09:20.714Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/ae/53dedffbcb61f5d47b4fb022de98162c66577dc47aa4459ac4d75fee3f05/sumup-0.2.2-py3-none-any.whl", hash = "sha256:08b95f29998b608e00e23959593884d93cc05c8c636c303ea8dbe99221bb7f25", size = 65181, upload-time = "2026-05-21T10:56:39.548Z" },
+    { url = "https://files.pythonhosted.org/packages/27/03/da3ea888de05ce424897fc529e5db62185c471b91608af64323cf98bdb52/sumup-0.3.1-py3-none-any.whl", hash = "sha256:ff84a2f4f8bc6527200e71e60a895c6ca826a90c3dcfc021698ab0d0cae2115d", size = 66447, upload-time = "2026-07-17T16:09:19.505Z" },
 ]
 
 [[package]]
@@ -404,7 +404,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "flask" },
-    { name = "sumup", specifier = "==0.2.2" },
+    { name = "sumup", specifier = "==0.3.1" },
 ]
 
 [[package]]
